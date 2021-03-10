@@ -8,6 +8,8 @@ import ToDoList from './components/ToDoList';
 import ToDoForm  from './components/ToDoForm';
 import PostList  from './components/PostList';
 import Pagination  from './components/Pagination';
+import PostFilterForm from './components/PostFilterForm';
+
 
 
 function App() {
@@ -63,7 +65,7 @@ function App() {
     setTodoList(newTodoList);
   }
   const handleTodoSubmit = (formValues) =>{
-    // console.log('Form values: ', formValues);
+    // console.log('Form values: ', formValues)   ;
 
     const newTodoList = [...todoList];
     const newTodo = {
@@ -75,6 +77,15 @@ function App() {
     setTodoList(newTodoList);
   }
 
+  const handleFilterChange = (newFilter) =>{
+    setFilters({
+      ...filters,
+      // set page về 1 nếu filter ko đủ 2 trên trở lên
+      _page: 1, 
+      title_like: newFilter.searchTerm,
+    });
+  };
+
 
   return (
     <div className="App">
@@ -83,8 +94,9 @@ function App() {
       <Person name='c' age='20' />
       <Person name='Nam' age='130' />
       <ColorBox/> */}
-      {/* <ToDoForm onSubmit={handleTodoSubmit}/>
-      <ToDoList todos={todoList} onTodoClick = {handleTodoClick}/> */}
+      <PostFilterForm onSubmit={handleFilterChange}/>
+      {/* <ToDoForm onSubmit={handleTodoSubmit}/> */}
+      <ToDoList todos={todoList} onTodoClick = {handleTodoClick}/>
       <PostList posts={postList}/>
       <Pagination pagination={pagination} onChangePage={handleClickButton}/>
     </div>
