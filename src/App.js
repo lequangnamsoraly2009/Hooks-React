@@ -10,6 +10,7 @@ import PostList  from './components/PostList';
 import Pagination  from './components/Pagination';
 import PostFilterForm from './components/PostFilterForm';
 import Clock from './components/Clock';
+import CountNumber from './components/CountNumber';
 
 
 
@@ -86,6 +87,11 @@ function App() {
   };
 
 
+  // const handleFormCountSubmit = (formValue) =>{
+    
+  // }
+
+
   return (
     <div className="App">
       {/* <ClickCount/>
@@ -94,6 +100,7 @@ function App() {
       <Person name='Nam' age='130' />
       <ColorBox/> */}
       <Clock />
+      <CountNumber />
       {/* <PostFilterForm onSubmit={handleFilterChange}/> */}
       {/* <ToDoForm onSubmit={handleTodoSubmit}/> */}
       {/* <ToDoList todos={todoList} onTodoClick = {handleTodoClick}/>
