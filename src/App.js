@@ -9,6 +9,7 @@ import ToDoForm  from './components/ToDoForm';
 import PostList  from './components/PostList';
 import Pagination  from './components/Pagination';
 import PostFilterForm from './components/PostFilterForm';
+import Clock from './components/Clock';
 
 
 
@@ -57,7 +58,6 @@ function App() {
       _page: newPage,
     })
   }
-
   const handleTodoClick = (todo) =>{
     const indexClick = todoList.findIndex((x)=>x.id===todo.id);
     const newTodoList = [...todoList];
@@ -76,7 +76,6 @@ function App() {
     newTodoList.push(newTodo);
     setTodoList(newTodoList);
   }
-
   const handleFilterChange = (newFilter) =>{
     setFilters({
       ...filters,
@@ -94,11 +93,12 @@ function App() {
       <Person name='c' age='20' />
       <Person name='Nam' age='130' />
       <ColorBox/> */}
-      <PostFilterForm onSubmit={handleFilterChange}/>
+      <Clock />
+      {/* <PostFilterForm onSubmit={handleFilterChange}/> */}
       {/* <ToDoForm onSubmit={handleTodoSubmit}/> */}
-      <ToDoList todos={todoList} onTodoClick = {handleTodoClick}/>
+      {/* <ToDoList todos={todoList} onTodoClick = {handleTodoClick}/>
       <PostList posts={postList}/>
-      <Pagination pagination={pagination} onChangePage={handleClickButton}/>
+      <Pagination pagination={pagination} onChangePage={handleClickButton}/> */}
     </div>
   );
 }
