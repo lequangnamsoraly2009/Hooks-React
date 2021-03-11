@@ -96,14 +96,14 @@ function App() {
       <Person name='c' age='20' />
       <Person name='Nam' age='130' />
       <ColorBox/> */}
-      {/* <Clock /> */}
+      <Clock />
       {/* <CountNumber /> */}
       {/* <PostFilterForm onSubmit={handleFilterChange}/> */}
       {/* <ToDoForm onSubmit={handleTodoSubmit}/> */}
       {/* <ToDoList todos={todoList} onTodoClick = {handleTodoClick}/>
       <PostList posts={postList}/>
       <Pagination pagination={pagination} onChangePage={handleClickButton}/> */}
-      <RandomColor/>
+      {/* <RandomColor/> */}
     </div>
   );
 }
