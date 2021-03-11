@@ -11,6 +11,7 @@ import Pagination  from './components/Pagination';
 import PostFilterForm from './components/PostFilterForm';
 import Clock from './components/Clock';
 import CountNumber from './components/CountNumber';
+import RandomColor from './components/RandomColor';
 
 
 
@@ -87,10 +88,6 @@ function App() {
   };
 
 
-  // const handleFormCountSubmit = (formValue) =>{
-    
-  // }
-
 
   return (
     <div className="App">
@@ -99,13 +96,14 @@ function App() {
       <Person name='c' age='20' />
       <Person name='Nam' age='130' />
       <ColorBox/> */}
-      <Clock />
-      <CountNumber />
+      {/* <Clock /> */}
+      {/* <CountNumber /> */}
       {/* <PostFilterForm onSubmit={handleFilterChange}/> */}
       {/* <ToDoForm onSubmit={handleTodoSubmit}/> */}
       {/* <ToDoList todos={todoList} onTodoClick = {handleTodoClick}/>
       <PostList posts={postList}/>
       <Pagination pagination={pagination} onChangePage={handleClickButton}/> */}
+      <RandomColor/>
     </div>
   );
 }
